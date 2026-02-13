@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class OrderServiceImpl implements OrderService {
-    public static final Logger logger = LogManager.getLogger(AuthenticationServiceImpl.class);
+    public static final Logger logger = LogManager.getLogger(OrderServiceImpl.class);
 
     @Override
     public Order completeOrder(Long userId) {
