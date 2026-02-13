@@ -1,5 +1,7 @@
 package mate.academy;
 
+import static mate.academy.service.AuthenticationServiceImpl.logger;
+
 import mate.academy.exception.AuthenticationException;
 import mate.academy.model.User;
 import mate.academy.service.AuthenticationService;
@@ -14,7 +16,7 @@ public class Main {
         try {
             user = authenticationService.login("bob", "1234");
         } catch (AuthenticationException e) {
-            e.printStackTrace();
+            logger.error("Cannot login user");
             return;
         }
         OrderService orderService = new OrderServiceImpl();
